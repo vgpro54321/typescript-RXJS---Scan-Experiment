@@ -11,12 +11,18 @@ let start = 1;
 
 console.log('app');
 
-let o$ = interval(1000).pipe(
-  scan((total, n) => {
-    console.log('inside scan', total, n);
-    return total + total;
-  }, 1),
-  startWith(start)
-);
+// let o$ = interval(1000).pipe(
+//   scan((total, n) => {
+//     console.log('inside scan', total, n);
+//     return total + total;
+//   }, 1),
+//   startWith(start)
+// );
 
-o$.subscribe((x) => console.log(x));
+// let o$ = interval(1000).pipe(
+//   scan((total) => {
+//     return total + 1;
+//   }, 0)
+//   //startWith(start)
+// );
+// o$.subscribe((x) => console.log(x));
